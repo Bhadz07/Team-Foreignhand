@@ -14,16 +14,17 @@
 
       html, body {
         height: 100%;
-        background-color: transparent !important; /* transparent override */
+        background-color: transparent !important;
         background-image: url('https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjHBkNoo9aFyFg2Edjrsvg7V1AX6NL5oZyswau2cUo87aVdKogWpqYdEYM_qzzALpqMTBV-1TQEkHDoZZy2tHtMpnL_MpQ1gEVqguSgzfYm1MM5WUEUBu4pJsaA8a2SRqtdP5-3LDfal4CtNCtViMzPDLrgKbrc8vx1F5GotkUq2zZINA_YiXRzKY7Z24Q/s1350/1000006140.jpg');
         background-size: cover;
         background-position: center;
         background-repeat: no-repeat;
         color: white;
-        font-family: Arial, sans-serif;
+        font-family: 'Arial', sans-serif;
         text-align: center;
         padding: 20px;
         overflow-x: hidden;
+        font-weight: bold; /* BOLD FONT */
       }
 
       img {
@@ -31,16 +32,23 @@
         border: 3px solid gold;
         display: block;
         margin: auto;
+        animation: unite 1s ease forwards;
       }
 
       a {
         color: gold;
         font-weight: bold;
         text-decoration: none;
+        transition: all 0.3s ease;
       }
 
       a:hover {
         text-decoration: underline;
+        letter-spacing: 1px;
+      }
+
+      .separator, p, div, a {
+        animation: unite 1s ease forwards;
       }
 
       /* Firework effect */
@@ -63,6 +71,18 @@
         100% {
           transform: scale(50);
           opacity: 0;
+        }
+      }
+
+      /* UNITE Animation */
+      @keyframes unite {
+        0% {
+          opacity: 0;
+          transform: scale(0.95) translateY(20px);
+        }
+        100% {
+          opacity: 1;
+          transform: scale(1) translateY(0);
         }
       }
     </style>
